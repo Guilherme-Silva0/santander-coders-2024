@@ -1,35 +1,31 @@
 package br.com.javastudies;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.TextStyle;
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
-        int nota = -1;
-        String graduacao;
+        String nome = "Guilherme";
 
-        if (nota >= 80) {
-            graduacao = "A";
-        } else if (nota < 80 && nota >= 70) {
-            graduacao = "B";
-        } else if (nota < 70 && nota >= 60) {
-            graduacao = "C";
-        } else if (nota < 60 && nota >= 0) {
-            graduacao = "D";
+        // ISO 8601
+        LocalDate hoje = LocalDate.now();
+        Locale brasil = Locale.of("pt", "BR");
+        String diaSemana = hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, brasil);
+        LocalDateTime agora = LocalDateTime.now();
+        String saudacao;
+        if (agora.getHour() >= 0 && agora.getHour() < 12) {
+            saudacao = "bom dia";
+        } else if (agora.getHour() >= 12 && agora.getHour() < 18) {
+            saudacao = "boa tarde";
+        } else if (agora.getHour() >= 18 && agora.getHour() < 24) {
+            saudacao = "boa noite";
         } else {
-            graduacao = "";
+            saudacao = "olá";
         }
 
-        switch (graduacao) {
-            case "A":
-            case "B":
-                System.out.println("Aluno aprovado");
-                break;
-            case "C":
-            case "D":
-                System.out.println("Aluno reprovado");
-                break;
-            default:
-                System.out.println("Nota inválida");
-                break;
-        }
+        System.out.printf("Olá, %s. Hoje é %s, %s.%n", nome, diaSemana, saudacao.toUpperCase());
 
     }
 }
