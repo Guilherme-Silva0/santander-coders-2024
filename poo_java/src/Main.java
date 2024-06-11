@@ -1,17 +1,15 @@
+import Animais.Cachorro;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world");
+        Cachorro cachorro = new Cachorro();
 
-        byte varByte = 127;
+        cachorro.nome = "Puppy";
+        cachorro.cor = "marrom";
+        cachorro.altura = 23;
+        cachorro.peso = 27.5;
+        cachorro.tamanhoDoRabo = 5;
 
-        System.out.println(varByte);
-        // short -32768 a 32767
-        // char 0 a 65535
-        // int -2b a 2b
-        // long -9t a 9t
-
-        int varInt = 234566789;
-
-        System.out.println(varInt);
+        System.out.println(cachorro);
     }
 }
