@@ -20,4 +20,21 @@ public class Passaro extends Animal {
     Passaro.totalPassaros = totalPassaros;
   }
 
+  @Override
+  public String toString() {
+    return "{" +
+        " nome='" + getNome() + "'" +
+        "}";
+  }
+
+  @Override
+  public void comer() {
+    throw new UnsupportedOperationException("Unimplemented method 'comer'");
+  }
+
+  @Override
+  public void dormir() {
+    throw new UnsupportedOperationException("Unimplemented method 'dormir'");
+  }
+
 }
