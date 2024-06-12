@@ -1,6 +1,7 @@
 package Animais;
 
 public class Cachorro {
+  private static int totalCachorros = 0;
   private String nome;
   private String cor;
   private int altura;
@@ -17,6 +18,8 @@ public class Cachorro {
     this.altura = altura;
     this.peso = peso;
     this.tamanhoDoRabo = tamanhoDoRabo;
+
+    totalCachorros++;
   }
 
   public void comer() {
@@ -92,4 +95,20 @@ public class Cachorro {
   public String getEstadoDeEspirito() {
     return this.estadoDeEspirito;
   }
+
+  public static int getTotalCachorros() {
+    return totalCachorros;
+  }
+
+  public static void setTotalCachorros(int totalCachorros) {
+    Cachorro.totalCachorros = totalCachorros;
+  }
+
+  @Override
+  public String toString() {
+    return "{" +
+        " nome='" + getNome() + "'" +
+        "}";
+  }
+
 }
