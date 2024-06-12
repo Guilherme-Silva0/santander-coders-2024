@@ -1,36 +1,22 @@
 package Animais;
 
-public class Cachorro {
+public class Cachorro extends Animal {
   private static int totalCachorros = 0;
-  private String nome;
-  private String cor;
-  private int altura;
-  private double peso;
   private int tamanhoDoRabo;
-  private String estadoDeEspirito;
-
-  public Cachorro() {
-  }
 
   public Cachorro(String nome, String cor, int altura, double peso, int tamanhoDoRabo) {
-    this.nome = nome;
-    this.cor = cor;
-    this.altura = altura;
-    this.peso = peso;
+    super(nome, cor, altura, peso);
     this.tamanhoDoRabo = tamanhoDoRabo;
-
     totalCachorros++;
-  }
-
-  public void comer() {
-  }
-
-  public void latir() {
-    System.out.println("AU AU");
   }
 
   public String pegar() {
     return "Bolinha";
+  }
+
+  @Override
+  public void soar() {
+    System.out.println("AU AU");
   }
 
   public String interagir(String acao) {
