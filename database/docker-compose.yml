@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: root
+      POSTGRES_DB: teste
+    volumes:
+      - ./docker/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
