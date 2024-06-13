@@ -1,0 +1,1 @@
+DELETE FROM disciplinas WHERE id_disciplina = 8;

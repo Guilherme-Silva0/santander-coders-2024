@@ -1,0 +1,1 @@
+UPDATE disciplinas SET nome = 'biologia' WHERE id_disciplina = 7;
