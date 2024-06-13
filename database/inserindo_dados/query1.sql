@@ -1,0 +1,1 @@
+INSERT INTO disciplinas VALUES (1,'português','literatura e gramática');
